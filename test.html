@@ -8,7 +8,7 @@
   <script type="text/javascript">
    console.log("ver6");
   var output = document.getElementById("output");
-  output.innerHTML = "Click "Get Temperature" button to see current temperature";
+  output.innerHTML = "Click 'Get Temperature' button to see current temperature";
    function doIT() {
     //Puck.write('LED1.reset();\n');
     Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = "Current temperature is: " + x + " °C";})
