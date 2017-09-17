@@ -2,16 +2,16 @@
  <head>
  </head>
  <body>
-  <button onclick="doIT();">Do IT</button>
+  <button onclick="doIT();">Click for temperature</button>
  <div id="output"> Output</div>
    <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
-   console.log("ver3");
+   console.log("ver4");
   var output = document.getElementById("output");
   output.innerHTML = "hello world";
    function doIT() {
     //Puck.write('LED1.reset();\n');
-    Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = x;})
+    Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = "Current temperature is:" " + x + " °C";})
    }
  </script>
 
