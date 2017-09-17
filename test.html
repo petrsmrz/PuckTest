@@ -4,11 +4,11 @@
  <body>
   <div id="currentTemperature">currentTemperature</div>
   <script src="https://www.puck-js.com/puck.js">
-   var currentTemperature=E.getTemperature().toFixed(2);
-   document.getElementById("currentTemperature");
+  // var currentTemperature=E.getTemperature().toFixed(2);
+   //document.getElementById("currentTemperature");
    
   </script>
-  <button onclick="Puck.currentTemperature.innerHTML = currentTemperature;\n');">On!</button>
+  <button onclick="Puck.read(E.getTemperature();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
  </body>
 </html>
