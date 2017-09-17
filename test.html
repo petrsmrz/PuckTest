@@ -1,37 +1,9 @@
-// Have a service to show temperature and battery level
-// This is only visible when you are connecting to the Puck
-
-var currentTemperature=E.getTemperature().toFixed(2)*100;
-
-console.log("Temp: "+currentTemperature);
-
-NRF.setServices({
- 0x1809 : { // Health Thermometer
-  0x2A6E: { // Temperature
-   readable: true,
-   notify: true,
-   value : [ currentTemperature % 256, currentTemperature / 256 ]
-  }
- },
- 0x180f : { // Battery Level
-  0x2a19 : { // Percentage
-   readable : true,
-   notify: true,
-   value: [ Puck.getBatteryPercentage() ],
-  }
- }
-});
-
-// Updating the temperature
-
-setInterval(function() {
- currentTemperature += 1; // For debugging: increase temp by 0.01 degree per update
- NRF.updateServices({
-  0x1809 : {
-   0x2A6E : {
-    value : [ currentTemperature % 256, currentTemperature / 256 ],
-    notify: true
-   }
-  }
- });
-}, 2000);
+<html>
+ <head>
+ </head>
+ <body>
+  <script src="https://www.puck-js.com/puck.js"></script>
+  <button onclick="Puck.write('LED1.set();\n');">On!</button>
+  <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+ </body>
+</html>
