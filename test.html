@@ -2,10 +2,14 @@
  <head>
  </head>
  <body>
- <b<div id="output"> Output</div>ody>
- <script>
+ <div id="output"> Output</div>
+   <script src="https://www.puck-js.com/puck.js"></script>
+  <script type="text/javascript">
   var output = document.getElementById("output");
   output.innerHTML = "hello world";
+   Puck.write('LED1.set();\n');
+   Puck.eval("E.getTemperature().toFixed(2)",function(x) { console.log(x); output.innerHTML = x;})
+   
  </script>
 
  </body>
