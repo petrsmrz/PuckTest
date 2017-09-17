@@ -6,11 +6,11 @@
  <div id="output"> Output</div>
    <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
-   console.log("ver2");
+   console.log("ver3");
   var output = document.getElementById("output");
   output.innerHTML = "hello world";
    function doIT() {
-    Puck.write('LED1.reset();\n');
+    //Puck.write('LED1.reset();\n');
     Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = x;})
    }
  </script>
