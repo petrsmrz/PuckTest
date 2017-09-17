@@ -10,7 +10,7 @@
   var output = document.getElementById("output");
   output.innerHTML = "hello world";
    function doIT() {
-    Puck.write('LED1.set();\n');
+    //Puck.write('LED1.set();\n');
     Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = x;})
    }
  </script>
