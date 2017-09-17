@@ -3,6 +3,9 @@
  </head>
  <body>
   <script src="https://www.puck-js.com/puck.js"></script>
+  <p id="demo">JavaScript can change HTML content.</p>
+  var currentTemperature=E.getTemperature().toFixed(2)*100;
+  <button type="button" onclick='document.getElementById("demo").innerHTML = currentTemperature >Click Me!</button>
   <button onclick="E.getTemperature();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
  </body>
