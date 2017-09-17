@@ -11,7 +11,7 @@
   output.innerHTML = "hello world";
    function doIT() {
     //Puck.write('LED1.reset();\n');
-    Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = "Current temperature is:" " + x + " °C";})
+    Puck.eval("E.getTemperature().toFixed(2)", function(x) { console.log(x); output.innerHTML = "Current temperature is: " + x + " °C";})
    }
  </script>
 
